@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <pubdate>20200212</pubdate>
+                <title>Eugene Zoning</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Land located within the Eugene Urban Growth Area is zoned to provide areas suitable for certain types of development. Each zone provides a set of regulations governing the uses, building setbacks, height, and other development standards. Property may also be subject to an overlay zone. The overlay establishes additional regulations beyond the base zone to address specific community objectives, such as protection of environmentally sensitive areas or improving the efficient use of public transit. In some cases, overlays may provide an exception to the standard regulations for the base zone.Base Zones: Land located within the Eugene Urban Growth Boundary is zoned to provide areas suitable for certain types of development. Each base zone provides a set of regulations governing the uses, building setbacks, building height and other development features.Overlay Zones: Property may also be subject to one or more overlay zones. Overlay zones establish additional regulations beyond the base zone to address specific community objectives, such as protection of environmentally sensitive areas or improving the efficient use of public transit.Special Area Zones: A special area zone is a type of base zone that is applied to a specific area of the city that possesses distinctive buildings or natural features that have special significance for the community and requires special consideration or implementation of conservation and development measures that can not be achieved through application of the standard base zones.Special Area Zone Subareas: Some special area zones are further divided into subareas, such as commercial or single-family residential. These subareas establish regulations that govern the uses and development of these specific areas.Terms of UseThis product is for informational purposes and may not have been prepared for, or be suitable for legal, engineering, or surveying purposes. This layer may not reflect recent Zoning changes. Users of this information should review or consult the primary data and information sources to ascertain the usability of this information. To verify information presented in this layer, contact the Planner-on-Duty at 541-682-5377.The maps and data available for access from the City of Eugene are provided &amp;quot;as is&amp;quot; without warranty or any representation of accuracy, timeliness or completeness. The burden for determining accuracy, completeness, timeliness, merchantability and fitness for or the appropriateness for use rests solely on the user accessing this information. The City of Eugene makes no warranties, expressed or implied, as to the use of the maps and data available for access at this website. There are no implied warranties of merchantability or fitness for a particular purpose. The user acknowledges and accepts all inherent limitations of the maps and data, including the fact that the maps and data are dynamic and in a constant state of maintenance, correction and revision. Any maps and associated data for access do not represent a survey. No liability is assumed for the accuracy of the data delineated on any map, either expressed or implied.</abstract>
+            <purpose>Land located within the Eugene Urban Growth Boundary is zoned to provide areas suitable for certain types of development. Each base zone provides a set of...</purpose>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-123.214359</westbc>
+                <eastbc>-123.028251</eastbc>
+                <northbc>44.142160</northbc>
+                <southbc>43.981087</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <place>
+                <placekt>Geographic Names Information System</placekt>
+                <placekey>Eugene</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>This product is for informational purposes and may not have been prepared for, or be suitable for legal, engineering, or surveying purposes. This layer may not reflect recent Zoning changes. Users of this information should review or consult the primary data and information sources to ascertain the usability of this information. To verify information presented in this layer, contact the Planner-on-Duty at 541-682-5377.The maps and data available for access from the City of Eugene are provided &amp;quot;as is&amp;quot; without warranty or any representation of accuracy, timeliness or completeness. The burden for determining accuracy, completeness, timeliness, merchantability and fitness for or the appropriateness for use rests solely on the user accessing this information. The City of Eugene makes no warranties, expressed or implied, as to the use of the maps and data available for access at this website. There are no implied warranties of merchantability or fitness for a particular purpose. The user acknowledges and accepts all inherent limitations of the maps and data, including the fact that the maps and data are dynamic and in a constant state of maintenance, correction and revision. Any maps and associated data for access do not represent a survey. No liability is assumed for the accuracy of the data delineated on any map, either expressed or implied.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>City of Eugene</cntorg>
+                    <cntper>Planning Division</cntper>
+                </cntorgp>
+            </cntinfo>
+        </ptcontac>
+        <datacred>City of Eugene, Planning Division</datacred>
+        <native> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</native>
+    </idinfo>
+    <dataqual>
+        <logic>High quality and current.</logic>
+        <complete>Current and complete.</complete>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <othercit>Zones additions and changes are derived from descriptions and maps shared by city staff. Originally digitized in the Map Model System (LCOG in-house system) in 1981 by LCOG staff using information provided by city. Converted to Informap circa 1986 Converted to Arc/INFO circa 1995. Removed Glenwood transfer areas from zoning 04/1999. Applied LUCU changes 10/2001. Removed RA as valid zone type 06/2003, after LUCU approval.</othercit>
+                    </citeinfo>
+                </srccite>
+                <typesrc/>
+            </srcinfo>
+            <procstep>
+                <procdesc>Notification from city staff.</procdesc>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>GT-polygon composed of chains</sdtstype>
+                <ptvctcnt>718</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>Zoning_Hub</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>alloverlays</attrlabl>
+                <attrdef>Zone Overlay Codes (comma-separated list)</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>10</edomv>
+                                                
+                        <edomvd>Residential Density Range Overlay - 10 Units per Acre</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>12</edomv>
+                                                
+                        <edomvd>Residential Density Range Overlay - 12 Units per Acre</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>13</edomv>
+                                                
+                        <edomvd>Residential Density Range Overlay - 13 Units per Acre</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>20</edomv>
+                                                
+                        <edomvd>Residential Density Range Overlay - 20 Units per Acre</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>40</edomv>
+                                                
+                        <edomvd>Residential Density Range Overlay - 40 Units per Acre</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>82</edomv>
+                                                
+                        <edomvd>Residential Density Range Overlay - 82 Units per Acre</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>89</edomv>
+                                                
+                        <edomvd>Residential Density Range Overlay - 89 Units per Acre</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>BW</edomv>
+                                                
+                        <edomvd>Broadway Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>CAS</edomv>
+                                                
+                        <edomvd>Commercial Airport Safety Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>EC</edomv>
+                                                
+                        <edomvd>East Campus Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>HD</edomv>
+                                                
+                        <edomvd>Hillside Development Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>ND</edomv>
+                                                
+                        <edomvd>Nodal Development Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>PD</edomv>
+                                                
+                        <edomvd>Planned Unit Development Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>SR</edomv>
+                                                
+                        <edomvd>Site Review Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>TD</edomv>
+                                                
+                        <edomvd>Transit Oriented Development Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>UL</edomv>
+                                                
+                        <edomvd>Urbanizable Land Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>WB</edomv>
+                                                
+                        <edomvd>Wetland Buffer Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>WP</edomv>
+                                                
+                        <edomvd>Waterside Protection Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>WQ</edomv>
+                                                
+                        <edomvd>Water Quality Overlay</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>WR</edomv>
+                                                
+                        <edomvd>Water Resource Overlay</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>finalorder</attrlabl>
+                <attrdef>Final Order - Jurisdictional order defining the zone</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>over10</attrlabl>
+                <attrdef>Residential Density Range Overlay Flag - 10 Units per Acre</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>over12</attrlabl>
+                <attrdef>Residential Density Range Overlay Flag - 12 Units per Acre</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>over13</attrlabl>
+                <attrdef>Residential Density Range Overlay Flag - 13 Units per Acre</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>over20</attrlabl>
+                <attrdef>Residential Density Range Overlay Flag - 20 Units per Acre</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>over40</attrlabl>
+                <attrdef>Residential Density Range Overlay Flag - 40 Units per Acre</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>over82</attrlabl>
+                <attrdef>Residential Density Range Overlay Flag - 82 Units per Acre</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>over89</attrlabl>
+                <attrdef>Residential Density Range Overlay Flag - 89 Units per Acre</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overbw</attrlabl>
+                <attrdef>Broadway Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overcas</attrlabl>
+                <attrdef>Commercial Airport Safety Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overec</attrlabl>
+                <attrdef>East Campus Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overhd</attrlabl>
+                <attrdef>Hillside Development Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overnd</attrlabl>
+                <attrdef>Nodal Development Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overpd</attrlabl>
+                <attrdef>Planned Unit Development Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>oversr</attrlabl>
+                <attrdef>Site Review Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overtd</attrlabl>
+                <attrdef>Transit Oriented Development Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overul</attrlabl>
+                <attrdef>Urbanizable Land Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overwb</attrlabl>
+                <attrdef>Wetland Buffer Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overwp</attrlabl>
+                <attrdef>Waterside Protection Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overwq</attrlabl>
+                <attrdef>Water Quality Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>overwr</attrlabl>
+                <attrdef>Water Resource Overlay Flag</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>No</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>Y</edomv>
+                                                
+                        <edomvd>Yes</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Coordinates defining the features.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>subarea</attrlabl>
+                <attrdef>Special Area Zone Subarea Code</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>C</edomv>
+                                                
+                        <edomvd>Commercial (Chase Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>C-2</edomv>
+                                                
+                        <edomvd>Community Commercial (Chambers Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>CMU</edomv>
+                                                
+                        <edomvd>Commercial Mixed Use (Royal Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>HDR</edomv>
+                                                
+                        <edomvd>High-Density Residential (Chase Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>HDR/MU</edomv>
+                                                
+                        <edomvd>High-Density Residential Mixed Use (Chase Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>LDR</edomv>
+                                                
+                        <edomvd>Low-Density Residential (Royal Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>MDR</edomv>
+                                                
+                        <edomvd>Medium-Density Residential (Royal Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>MSC</edomv>
+                                                
+                        <edomvd>Main Street Commercial (Royal Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>NR</edomv>
+                                                
+                        <edomvd>Natural Resources (Royal Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>PL</edomv>
+                                                
+                        <edomvd>Public Land (Chase Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>PRO</edomv>
+                                                
+                        <edomvd>Park, Recreation, and Open Space (Chase Node Special Area, Royal Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>R-1</edomv>
+                                                
+                        <edomvd>Low-Density Residential (Chambers Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>R-2</edomv>
+                                                
+                        <edomvd>Medium-Density Residential (Chambers Special Area)</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>RMU</edomv>
+                                                
+                        <edomvd>Residential Mixed Use (Royal Node Special Area)</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>zonecode</attrlabl>
+                <attrdef>Parent Zone Code</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>AG</edomv>
+                                                
+                        <edomvd>Agricultural</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>C-1</edomv>
+                                                
+                        <edomvd>Neighborhood Commercial</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>C-2</edomv>
+                                                
+                        <edomvd>Community Commercial</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>C-3</edomv>
+                                                
+                        <edomvd>Major Commercial</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>E-1</edomv>
+                                                
+                        <edomvd>Campus Employment</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>E-2</edomv>
+                                                
+                        <edomvd>Mixed Use Employment</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>GO</edomv>
+                                                
+                        <edomvd>General Office</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>I-2</edomv>
+                                                
+                        <edomvd>Light-Medium Industrial</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>I-3</edomv>
+                                                
+                        <edomvd>Heavy Industrial</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>NR</edomv>
+                                                
+                        <edomvd>Natural Resource</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>PL</edomv>
+                                                
+                        <edomvd>Public Land</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>PRO</edomv>
+                                                
+                        <edomvd>Park, Recreation, and Open Space</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>R-1</edomv>
+                                                
+                        <edomvd>Low-Density Residential</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>R-1.5</edomv>
+                                                
+                        <edomvd>Rowhouse</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>R-2</edomv>
+                                                
+                        <edomvd>Medium-Density Residential</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>R-3</edomv>
+                                                
+                        <edomvd>Limited High-Density Residential</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>R-4</edomv>
+                                                
+                        <edomvd>High-Density Residential</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-C</edomv>
+                                                
+                        <edomvd>Chambers Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-CN</edomv>
+                                                
+                        <edomvd>Chase Node Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-DR</edomv>
+                                                
+                        <edomvd>Downtown Riverfront Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-DW</edomv>
+                                                
+                        <edomvd>Downtown Westside Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-E</edomv>
+                                                
+                        <edomvd>Elmira Road Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-F</edomv>
+                                                
+                        <edomvd>Fifth Avenue Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-H</edomv>
+                                                
+                        <edomvd>Historic</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-HB</edomv>
+                                                
+                        <edomvd>Blair Boulevard Historic Commercial Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-JW</edomv>
+                                                
+                        <edomvd>Jefferson Westside Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-RN</edomv>
+                                                
+                        <edomvd>Royal Node Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-RP</edomv>
+                                                
+                        <edomvd>Riverfront Park Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-W</edomv>
+                                                
+                        <edomvd>Whiteaker Special Area</edomvd>
+                                            
+                    </edom>
+                                        
+                    <edom>
+                                                
+                        <edomv>S-WS</edomv>
+                                                
+                        <edomvd>Walnut Station Special Area</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>zonejuris</attrlabl>
+                <attrdef>Zone Jurisdiction</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>EUG</edomv>
+                                                
+                        <edomvd>City of Eugene</edomvd>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>zonename</attrlabl>
+                <attrdef>Parent Zone Name (zonecode attribute code value definition)</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>overcl</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>over92</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Shape_Length</attrlabl>
+                <attrdef>Length of feature in internal units.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Positive real numbers that are automatically generated.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape_Area</attrlabl>
+                <attrdef>Area of feature in internal units squared.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Positive real numbers that are automatically generated.</udom>
+                                    
+                </attrdomv>
+            </attr>
+        </detailed>
+    </eainfo>
+    <metainfo>
+        <metd>20220121</metd>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
