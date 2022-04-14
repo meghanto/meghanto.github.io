@@ -8,6 +8,7 @@ format:
     code-fold: true
     fig-width: 10
     fig-height: 8.5
+    self-contained: true
 pdf-engine: pdflatex
 runtime: shiny
 ---
