@@ -1,0 +1,58 @@
+---
+title: "An Awesome Graph in R"
+author: "Meghanto Majumder"
+date: "Apr 9 2022"
+
+format:
+  html:
+    code-fold: true
+    fig-width: 10
+    fig-height: 8.5
+pdf-engine: pdflatex
+runtime: shiny
+---
+
+Installing packages (run once)
+
+```{r}
+#| eval: false
+
+install.packages("leaflet")
+install.packages('sp')
+install.packages('sf')
+install.packages('tmap')
+```
+
+
+Downloading the dataset (run once)
+
+```{r}
+#| eval: false
+download.file('https://opendata.arcgis.com/api/v3/datasets/ebb2e1f38f274f2dbbe4cba16c6c66af_0/downloads/data?format=shp&spatialRefId=2914','ez.zip')
+unzip('ez.zip',exdir='ez')
+```
+
+Loading the libraries
+
+```{r}
+#| output: false
+library(leaflet)
+library(sp)
+library(sf)
+library(tmap)
+library(purrr)
+```
+
+Creating the map
+
+```{r}
+#| column: page
+#| fig-align: center
+#| warning: false
+#| layout-nrow: 2
+ez=st_make_valid(read_sf('ez'))
+m=tm_shape(ez)
+p=partial(tm_polygons,col="zonecode",popup.v=c("zonecode","zonename","SHAPE_Area"),al=0.7,style="cat",pal='Accent',border.a=0.1)
+tmap_leaflet(m+p(legend.show=F))
+m+p(legend.is.p=F)+tm_layout(legend.on=T,legend.pos=c('center','top'))
+```
