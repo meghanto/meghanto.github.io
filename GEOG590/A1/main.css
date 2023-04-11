@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    z-index: 9999;
+    position: relative;
+    text-align: justify
+}
+
+#title h1 {
+    background-image: linear-gradient(305deg, tomato, gold, cyan);
+    font: bold 50px 'Arial Black', sans-serif;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(2px 4px #333);
+    letter-spacing: .15em;
+
+}
+#title h2 {
+    background-image: linear-gradient(175deg, cyan, gold, tomato);
+    font: bold 20px Calibri, sans-serif;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: drop-shadow(2px 2px #333);
+
+
+
+}
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
