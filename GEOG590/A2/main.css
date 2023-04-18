@@ -1,0 +1,51 @@
+#map1,#map2,#map3 {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+}
+body {
+    background-color: rgb(31, 27, 27);
+}
+body h1{
+    margin: auto;
+    color: cornsilk;
+    text-orientation: sideways;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 49fr;
+    grid-row-gap: 30px;
+}
+.marker-duck {
+    background-image: url('https://img.icons8.com/fluency/48/null/duck.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    cursor: pointer;
+  }
+
+  .marker-texas {
+    background-image: url('https://img.icons8.com/stickers/100/null/launched-rocket.png');
+    background-size: cover;
+    width: 30px;
+    height: 40px;
+    border-radius: 30%;
+    cursor: pointer;
+  }
+
+  .marker-okc {
+    background-image: url('https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-bison-animal-flaticons-lineal-color-flat-icons.png');
+    background-size: cover;
+    width: 50px;
+    height: 40px;
+    border-radius: 30%;
+    cursor: pointer;
+  }
+
+
