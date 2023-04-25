@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/* style for full page map */
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*  stlye for paragraph tags */
+p {
+    color: white;
+}
+
+/* style for heading level 4 tags */
+h4 {
+    color: white;
+    margin-left: 10px;
+}
+
+/*  style for items with the class "LegendContainer" */
+.LegendContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    width: 300px;
+    height: 40px;
+    background: rgba(80, 80, 80, .75);
+    transition: width 2s, height 2s;
+    /* this is the time it takes for the container to transition */
+    border-radius: 7px;
+}
+
+/*  style for items with the class "descriptionPanel" */
+.descriptionPanel {
+    position: absolute;
+    bottom: 65px;
+    left: 20px;
+    z-index: 2;
+    width: 300px;
+    height: 40px;
+    background: rgba(80, 80, 80, .75);
+    transition: width 2s, height 2s;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+/*  style for items with the class "descriptionPanel" when active */
+/*  this used to be "LegendContainer" instead of descriptionPanel. I don't understand the purpose of this part!*/
+.descriptionPanel:active {
+    width: 300px;
+    height: 250px;
+}
+
+/* style for items with the class "legendItem" */
+.legendItem {
+    margin: 0px;
+    padding-left: 10px;
+    display: inline-block;
+    margin: auto;
+    transform: translate(50%, 50%);
+}
+
+
+/* style for items with the class "layerDescription" */
+.layerDescription {
+    color: white;
+    padding-left: 10px;
+}
+
+
+.renter {
+    color: #17b590;
+    cursor: pointer;
+}
+
+/* darkened version of renter color to signify inactive */
+.renter.inactive {
+    color: #387d6d;
+    cursor: pointer;
+}
+
+.owner {
+    color: #e66700;
+    cursor: pointer;
+}
+
+/* darkened version of owner color to signify inactive */
+
+.owner.inactive {
+    color: #a85e21;
+    cursor: pointer;
+}
+
+/* style for items with the class "chevron" */
+.chevron {
+    position: relative;
+    margin-left: 45%;
+    font-size: x-large;
+    color: white;
+}

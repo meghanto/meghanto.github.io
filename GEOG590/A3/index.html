@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Owners vs Renters Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div id='map'></div>
+    <!-- Map description Panel, interactive arrow to collapse panel-->
+
+
+    <div class="descriptionPanel" id="descriptionPanel" style="height: 250px;">
+        <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
+        <hr />
+        <h4>WHAT AM I LOOKING AT?</h4>
+        <p style="margin-left: 10px; margin-right: 10px;">
+            This is a map showing every single person in the Portland Area as a dot. Data is taken from the 2017 US
+            Census, and is accurate at the level of a block, however within each block location is randomized. Points
+            are colored based on the number home owners versus renters on a block.
+        </p>
+    </div>
+
+    <!-- Map legend panel, the dots are interactive and uses javascript and the Mapbox API to toggle layer visibility-->
+    <div class="LegendContainer">
+        <div class="legendItem">
+            <span class="owner" onClick=ownerToggle(this)>&#11044;</span>
+            <span class="layerDescription">Owners</span>
+        </div>
+        <div class="legendItem">
+            <span class="renter" onClick=renterToggle(this)>&#11044;</span>
+            <span class="layerDescription">Renters</span>
+        </div>
+    </div>
+
+</body>
+
+<script src="main.js"></script>
