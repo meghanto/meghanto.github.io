@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Swipe between Owners and Renters</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- JS and CSS for the swipe plugin -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js'></script>
+    <link rel='stylesheet'
+        href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css'
+        type='text/css' />
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div id="comparison-container">
+        <div id='owners' class='map'></div> <!-- div for owners map div -->
+        <div id='renters' class='map'></div> <!--  div for renters map div -->
+    </div>
+
+    <div class="LegendContainer">
+        <div class="legendItem"> <!-- div for the colormap in the legend -->
+            <span>0%</span><span style="color:white">100%</span> <!-- text at 2 ends of colormap-->
+        </div>
+
+    </div>
+
+</body>
+<script src="main.js"></script>
+
+</html>
