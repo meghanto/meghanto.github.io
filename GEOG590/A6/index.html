@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>University of Oregon Mapping</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <!--    The Mapbox JavaScript here in the <head> of the page    -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
+  <!--    The Mapbox CSS here in the <head> of the page    -->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!--   Link to Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+  <link href='main.css' rel='stylesheet' />
+
+
+</head>
+
+<body>
+  <!--  The map div -->
+  <div id='map'></div>
+
+  <!--  Insert the button elements here  -->
+  <div id="wrapper">
+    <button class='fly' id='PortlandButton'>Jump to Portland</button>
+    <button class='fly' id='LondonButton'>Jump to London</button>
+    <button class='fly' id='YellowstoneButton'>Jump to Yellowstone</button>
+  </div>
+
+  <script src="main.js">    </script>
+
+</body>
+
+</html>

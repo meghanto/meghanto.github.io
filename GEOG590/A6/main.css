@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Overrides the pop-up width slightly bigger min-width than the default Mapbox CSS*/
+.mapboxgl-popup {
+    min-width: 325px;
+    /*add the css for the popup font here */
+    font-family: 'Arvo', serif;
+}
+
+.mapboxgl-marker {
+    cursor: pointer;
+}
+
+/* The CSS for the "Fly" buttons  */
+.fly {
+    display: inline-block;
+    /* displays over the map */
+    position: relative;
+    /* displays over the map */
+    margin: 0px auto;
+    /* width of parent div */
+    width: 100%;
+    padding: 10px;
+    border-style: solid;
+    border-color: oldlace;
+    border-radius: 3px;
+    /* rounded corners */
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    color: oldlace;
+    background: navy;
+    cursor: pointer;
+}
+
+.popupImage {
+    width: 100%;
+}
+
+
+/* Insert the CSS for the image here */
+
+/* Insert the CSS for the button here */
+
+button {
+    font-family: 'Arvo', serif;
+    font-weight: 600;
+}
+
+#wrapper {
+    display: flex;
+}
