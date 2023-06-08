@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*  style for items with the class "LegendContainer" */
+.LegendContainer {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    z-index: 2;
+    width: 300px;
+    height: 20px;
+    background: rgba(80, 80, 80, .75);
+    transition: width 2s, height 2s;
+    /* this is the time it takes for the container to transition */
+    border-radius: 7px;
+}
+
+.legendItem {
+    width: inherit;
+    position: relative;
+    height: 20px;
+    border-radius: inherit;
+    margin: 0px;
+    padding-left: 10px;
+    display: inline-block;
+    margin: auto;
+    background: hsl(225, 100%, 100%);
+    background: linear-gradient(90deg, #2a4710 0%, #ddf872 100%); /*the gradient function for the color mapping used*/
+    display: flex;
+    opacity: 0.7;
+    justify-content: space-between;
+
+
+}
+
+/* create and replace original icon with custom icon*/

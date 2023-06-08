@@ -1,0 +1,50 @@
+---
+format: 
+  revealjs:
+    theme: [default, style.scss]
+    width: 1600
+    height: 900
+---
+
+##  {.title background-image="chicago.jpg" background-size="fit" background-position="center"}
+
+The Second City Project
+
+::: r-fit-text
+
+Looking at Chicago's
+
+building footprint
+
+:::
+among other things
+
+::: footer
+
+Meghanto Majumder, GEOG590
+:::
+
+## Why Chicago?
+
+I love urban spaces, and exploring different facets of cities. 
+
+The Chicago metro area is one of the largest urban areas in the world, but gets way less hype than NYC or Tokyo. 
+
+---
+
+## The Data
+
+Building footprint data from Chicago Data Store, a web repository of all the data the city of Chicago collects.
+
+From the building footprints dataset, two variables are of importance
+
+- year_built
+- stories 
+
+## The Challenges
+
+- QGIS is a PAIN. 
+- Tried to do aggregation by using a spatial join, was a lot of hassle
+- Trying to squeeze out the most performance out of mapbox is a hassle as well.
+
+## The Map {background-iframe=""}

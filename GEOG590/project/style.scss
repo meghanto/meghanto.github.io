@@ -1,0 +1,38 @@
+/*-- scss:defaults --*/
+
+$theme-light: #FFF4E0;
+$theme-yellow: #FFE0A8EE;
+$theme-orange: #D97146;
+$theme-red: #AD5769;
+$theme-grey: #484848;
+$theme-lightgrey: #ebecee;
+
+$body-bg: $theme-light;
+$body-color: $theme-grey;
+$link-color: $theme-red;
+
+/*-- scss:rules --*/
+
+.orange {
+  color: $theme-orange;
+  font-weight: bold;
+}
+
+.red {
+  color: $theme-red;
+  font-weight: bold;
+}
+
+.reveal div.sourceCode pre code {
+    background-color: $theme-yellow;
+}
+
+.reveal .title {
+  color: $theme-yellow;
+}
+
+
+
+.reveal {
+  font-size: 3em;
+}
