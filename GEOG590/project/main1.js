@@ -2,11 +2,12 @@ let { store, component } = reef;
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWVnaGFudG8iLCJhIjoiY2xnNWRucDdsMDJldDNrbmRubXFlOGZ3cCJ9.LyZK-PVSq3JxoS2GkQV9vQ'; //  Put your access token between the single quotes.
-portland_center = [-87.623177, 41.881832]; //store portland center
+chicago_center = [-87.623177, 41.881832]; //store chicago center
+//store min and max of every value
 let minmax_vars = {
-    'median': [1886.0, 2010.0],
-    'std': [0.0, 59.926145021541785],
-    'count': [2, 2331],
+    'year_median': [1886.0, 2010.0],
+    'year_std': [0.0, 59.926145021541785],
+    'building_count': [2, 2331],
     'Median_Rent_2012-16': [286.0, 2771.0],
     'Job_Growth_Rate_from_2004_to_2013': [-0.3449, 0.6485],
     'Median_Hhold._Income_of_Residents_in_2012-16': [9367.0, 157595.0],
@@ -22,11 +23,9 @@ let minmax_vars = {
     'Census_Response_Rate_Social_Capital_Proxy': [43.0, 91.8]
 };
 let var_names = {
-    'median': 'Median Year Built',
-    'std': 'Standard Deviation: Year Built',
-    'count': 'Number of Buildings',
-    'tract': 'Tract Number',
-    'Name': 'Tract Name',
+    'year_median': 'Median Year Built',
+    'year_std': 'Standard Deviation: Year Built',
+    'building_count': 'Number of Buildings',
     'Median_Rent_2012-16': 'Median Rent (2012-16) (in $)',
     'Job_Growth_Rate_from_2004_to_2013': 'Job Growth Rate (2004-2013)',
     'Median_Hhold._Income_of_Residents_in_2012-16': 'Median HH income in 2012-16(in $)',
@@ -47,7 +46,7 @@ var popup = new mapboxgl.Popup({
     closeOnClick: false,
 });
 
-//store popups of left and right orientations (related to customization 1)
+//store popups of left and right orientations (related to customization 1, Ass. 4)
 var popupleft = new mapboxgl.Popup({
     closeButton: false,
     closeOnClick: false,
@@ -59,64 +58,130 @@ var popupright = new mapboxgl.Popup({
     anchor: 'right'
 });
 
-var propertyLeft = "year_median";
-var propertyRight = "Median_Rent_2012-16";
 
 
-var ownerMap = new mapboxgl.Map({
-    container: 'owners', // id of a div on your page, where the map will be inserted
+var leftMap = new mapboxgl.Map({
+    container: 'leftmap', // id of a div on your page, where the map will be inserted
     style: 'mapbox://styles/meghanto/clindro7s008f01od89po57ci', // stylesheet location
-    center: portland_center, // starting position [lng, lat] eg. [-122.6788, 45.5212]
+    center: chicago_center, // starting position [lng, lat] 
     zoom: 10 // starting zoom 
 });
 
 
-var renterMap = new mapboxgl.Map({
-    container: 'renters', // owners map div 
-    style: 'mapbox://styles/meghanto/clinf5ml7008g01od50v1aq6y', // Mapbox light style so we can observe the swipe
-    center: portland_center,// Use the same center as your other map so that they are perfectly aligned
+var rightMap = new mapboxgl.Map({
+    container: 'rightmap', // rightmap map div 
+    style: 'mapbox://styles/meghanto/clinf5ml7008g01od50v1aq6y', 
+    center: chicago_center,// Use the same center as your other map so that they are perfectly aligned
     zoom: 10
 });
 var container = '#comparison-container';
 
-var map = new mapboxgl.Compare(ownerMap, renterMap, container, {
+var map = new mapboxgl.Compare(leftMap, rightMap, container, {
 })
 
-ownerMap.dragRotate.disable();
+leftMap.dragRotate.disable();
 
 // disable map rotation using touch rotation gesture
-ownerMap.touchZoomRotate.disableRotation();
+leftMap.touchZoomRotate.disableRotation();
 
-renterMap.dragRotate.disable();
+rightMap.dragRotate.disable();
 
 // disable map rotation using touch rotation gesture
-renterMap.touchZoomRotate.disableRotation();
+rightMap.touchZoomRotate.disableRotation();
 
 
-ownerMap.on('load', function () { })
-// the rest of the owner data code will go in here
+
+data = store({ leftvar: "year_median", rightvar: "Median_Rent_2012-16" }) //reef reactive datastore
+function leftLegend() {
+    return `<span style="color:white">${minmax_vars[data.leftvar][0]}</span><span >${minmax_vars[data.leftvar][1]}</span> `;
+}
+function rightLegend() {
+    return `<span style="color:white">${minmax_vars[data.rightvar][0]}</span><span >${minmax_vars[data.rightvar][1]}</span> `;
+}
+
+function leftChange(val) {
+    data.leftvar = val;
+    leftMap.setPaintProperty("meghanto-censustracts", 'fill-color', [
+        "interpolate",
+        ["linear"],
+        ["get", data.leftvar],
+        minmax_vars[data.leftvar][0],
+        "#2a4710",
+        minmax_vars[data.leftvar][1],
+        "#ddf872"
+    ])
+    // if any property is changed, quickly repaint
+
+}
+function rightChange(val) {
+    data.rightvar = val;
+    rightMap.setPaintProperty("meghanto-censustracts", 'fill-color', [
+        "interpolate",
+        ["linear"],
+        ["get", data.rightvar],
+        minmax_vars[data.rightvar][0],
+        "#2a4710",
+        minmax_vars[data.rightvar][1],
+        "#ddf872"
+    ])
+}
+
+component('#legendleft', leftLegend);
+component('#legendright', rightLegend);
+
+function leftLabel() {
+    return `<p>${var_names[data.leftvar]}</p>
+    <label for="left-select"><p>Change:</p></label>
+    <select name="VarsL" id="left-select" onChange="leftChange(this.value)" >
+    ${Object.entries(var_names).map(([k, v], i) =>
+        `<option value=${k} key=${k}  ${k == data.leftvar ? "selected" : ""} > ${v} </option>`)
+        }</select> 
+   `;
+}
+
+// use JSX to dynamically update the labels
+function rightLabel() {
+    return `<p>${var_names[data.rightvar]}</p>
+     <label for="right-select"><p>Change:</p></label>
+     <select name="VarsR" id="right-select" onChange="rightChange(this.value)" >
+     ${Object.entries(var_names).map(([k, v], i) =>
+        `<option value=${k} key=${k} ${k == data.rightvar ? "selected" : ""}> ${v} </option>`).join("\n")
+        }</select> 
+    `;
+}
+
+component('#labelleft', leftLabel, { events: true });
+component('#labelright', rightLabel, { events: true });
 
 
-ownerMap.on('mousemove', 'meghanto-censustracts', function (e) {
+
+
+leftMap.on('load', function () { })
+
+
+
+
+
+leftMap.on('mousemove', 'meghanto-censustracts', function (e) {
 
     // Change the cursor style as a UI indicator.
-    ownerMap.getCanvas().style.cursor = 'pointer';
+    leftMap.getCanvas().style.cursor = 'pointer';
 
     var coordinates = e.lngLat;
-    var description = e.features[0].properties[propertyLeft];
+    var description = e.features[0].properties[data.leftvar];
 
     // Populate the popup and set its coordinates
     // based on the feature found.
     popup.setLngLat(coordinates)
-        .setHTML(propertyLeft + "  " + description)
-        .addTo(ownerMap);
+        .setHTML(e.features[0].properties["Name"]+"<br/>"+var_names[data.leftvar] + "  " + description)
+        .addTo(leftMap);
     var popup_right = popup.getElement().getBoundingClientRect().right;
     //check if the popup overlaps with the slider or not
     if (popup_right * 1.1 > map.currentPosition) {
         popup.remove();
         popupright.setLngLat(coordinates)
-            .setHTML(propertyLeft + "  " + description)
-            .addTo(ownerMap);
+            .setHTML(e.features[0].properties["Name"]+"<br/>"+var_names[data.leftvar] + "  " + description)
+            .addTo(leftMap);
     }
     else {
         popupright.remove();
@@ -124,58 +189,60 @@ ownerMap.on('mousemove', 'meghanto-censustracts', function (e) {
 
 });
 
-ownerMap.on('mouseleave', 'meghanto-censustracts', function () {
-    ownerMap.getCanvas().style.cursor = '';
+leftMap.on('mouseleave', 'meghanto-censustracts', function () {
+    leftMap.getCanvas().style.cursor = '';
     popup.remove();
     popupright.remove();
 });
 
 
 
-renterMap.on('load', function () { })
+rightMap.on('load', function () { })
 
-renterMap.on('mousemove', 'meghanto-censustracts', function (e) {
+rightMap.on('mousemove', 'meghanto-censustracts', function (e) {
 
     // Change the cursor style as a UI indicator.
-    renterMap.getCanvas().style.cursor = 'pointer';
+    rightMap.getCanvas().style.cursor = 'pointer';
     var coordinates = e.lngLat;
-    var description = e.features[0].properties[propertyRight];
+    var description = e.features[0].properties[data.rightvar];
 
     // Populate the popup and set its coordinates
     // based on the feature found.
     popup.setLngLat(coordinates)
-        .setHTML(propertyRight + "  " + description + "$")
-        .addTo(renterMap);
+        .setHTML(e.features[0].properties["Name"]+"<br/>"+var_names[data.rightvar] + "  " + description)
+        .addTo(rightMap);
     var popup_left = popup.getElement().getBoundingClientRect().left;
     //check if the popup overlaps with the slider or not (note, here we check the left edge)
     if (popup_left < map.currentPosition * 1.1) {
         popup.remove();
         popupleft.setLngLat(coordinates)
-            .setHTML(propertyRight + "  " + description + "$")
-            .addTo(renterMap);
+            .setHTML(e.features[0].properties["Name"]+"<br/>"+var_names[data.rightvar] + "  " + description)
+            .addTo(rightMap);
     }
     else {
         popupleft.remove();
     }
 });
 
-renterMap.on('mouseleave', 'meghanto-censustracts', function () {
-    renterMap.getCanvas().style.cursor = '';
+rightMap.on('mouseleave', 'meghanto-censustracts', function () {
+    rightMap.getCanvas().style.cursor = '';
     popup.remove();
     popupleft.remove();
 });
 
 
-ownerMap.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-left'); // add navigation controls in top left corner
-renterMap.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-left'); //controls present in both halves at same location for seamlessness
+leftMap.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-left'); // add navigation controls in top left corner
+rightMap.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-left'); //controls present in both halves at same location for seamlessness
+
+//panel logic similar to Map 1
 var panelDesc = document.getElementById('glyph');
 var panelstate = { panelopen: true };
-ownerMap.on('mousedown', () => {
+leftMap.on('mousedown', () => {
     document.getElementById('text_panel').style.display = 'none';
     document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
     panelstate.panelOpen = false;
 })
-renterMap.on('mousedown', () => {
+rightMap.on('mousedown', () => {
     document.getElementById('text_panel').style.display = 'none';
     document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
     panelstate.panelOpen = false;
@@ -194,13 +261,3 @@ function panelSelect(e) {
     }
 }
 
-data = store({ leftvar: "median", rightvar: "Median_Rent_2012-16" })
-function leftLegend() {
-    return `<span style="color:white">${minmax_vars[data.leftvar][0]}</span><span >${minmax_vars[data.leftvar][1]}</span> `;
-}
-function rightLegend() {
-    return `<span style="color:white">${minmax_vars[data.rightvar][0]}</span><span >${minmax_vars[data.rightvar][1]}</span> `;
-}
-
-component('#legendleft', leftLegend);
-component('#legendright', rightLegend);

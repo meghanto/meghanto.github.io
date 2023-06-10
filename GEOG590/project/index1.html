@@ -24,39 +24,51 @@
 
 <body>
     <div id="comparison-container">
-        <div id='owners' class='map'></div> <!-- div for owners map div -->
-        <div id='renters' class='map'></div> <!--  div for renters map div -->
+        <div id='leftmap' class='map'></div> <!-- div for owners map div -->
+        <div id='rightmap' class='map'></div> <!--  div for renters map div -->
     </div>
-    
-    <div class="descriptionPanel" id="descriptionPanel">
-        <div id="text_panel">
-            <h1>Chicago's Census Tracts:</h1>
-            <h3>
-                Gain insight on tract level data, and compare variables building age, building age diversity and other factors such as Median Rent </h3>
-            <h5> </br> Data is taken from <a
-                    href="https://opportunityatlas.org">The Opportunity Atlas Project</a></h5>
+    <a href="index.html"><button class="button">Switch to Building View</button><a></a>
 
-            <hr />
-        </div>
-        <span id="glyph" class="chevron glyphicon glyphicon-chevron-up"></span>
+        <div class="descriptionPanel" id="descriptionPanel">
+            <div id="text_panel">
+                <h1>Chicago's Census Tracts:</h1>
+                <h3>
+                    Gain insight on tract level data, and compare variables building age, building age diversity and
+                    other
+                    factors such as Median Rent </h3>
+                <h5> </br> Data is taken from <a href="https://opportunityatlas.org">The Opportunity Atlas Project</a>
+                </h5>
+
+                <hr />
+            </div>
+            <span id="glyph" class="chevron glyphicon glyphicon-chevron-up"></span>
 
 
-    </div>
-
-    
-
-    <div class="LegendContainer">
-        <div class="legendItem" id="legendleft"> <!-- div for the colormap in the legend -->
- <!-- text at 2 ends of colormap-->
         </div>
 
-    </div>
-    <div class="LegendContainerRight">
 
-    <div class="legendItem" id="legendright"> <!-- div for the colormap in the legend -->
- <!-- text at 2 ends of colormap-->
-    </div>
-</div>
+
+        <div class="LegendContainer">
+            <div class="legendItem" id="legendleft">
+                <!-- div for the colormap in the legend -->
+
+                <!-- text at 2 ends of colormap-->
+            </div>
+            <div id="labelleft"> </div>
+
+
+        </div>
+
+        <div class="LegendContainerRight">
+            <div class="legendItem" id="legendright">
+                <!-- div for the colormap in the legend -->
+
+
+                <!-- text at 2 ends of colormap-->
+            </div>
+            <div id="labelright"></div>
+
+        </div>
 
 
 

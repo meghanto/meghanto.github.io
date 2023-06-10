@@ -29,15 +29,20 @@ body * {
     transition: visibility 2s;
     overflow: hidden;
     border-radius: 0px 0px 7px 7px;
-    
-  }
-  
-  .descriptionPanel h1,h2,h3,h4,h5,h6{
+
+}
+
+.descriptionPanel h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: whitesmoke;
     margin-left: 5%;
     margin-right: 5%;
-  }
-  
+}
+
 /*  style for items with the class "LegendContainer" */
 .LegendContainer {
     position: absolute;
@@ -50,8 +55,10 @@ body * {
     transition: width 2s, height 2s;
     /* this is the time it takes for the container to transition */
     border-radius: 7px;
+    padding-bottom: 3em;
 }
-.LegendContainerRight{
+
+.LegendContainerRight {
     position: absolute;
     bottom: 40px;
     right: 20px;
@@ -60,6 +67,7 @@ body * {
     height: 20px;
     background: rgba(80, 80, 80, .75);
     transition: width 2s, height 2s;
+    padding-bottom: 3em;
     /* this is the time it takes for the container to transition */
     border-radius: 7px;
 
@@ -72,10 +80,10 @@ body * {
     border-radius: inherit;
     margin: 0px;
     padding-left: 10px;
-    display: inline-block;
     margin: auto;
     background: hsl(225, 100%, 100%);
-    background: linear-gradient(90deg, #2a4710 0%, #ddf872 100%); /*the gradient function for the color mapping used*/
+    background: linear-gradient(90deg, #2a4710 0%, #ddf872 100%);
+    /*the gradient function for the color mapping used*/
     display: flex;
     opacity: 0.7;
     justify-content: space-between;
@@ -83,17 +91,17 @@ body * {
 
 }
 
-.legendItem.legendright {
+#legendright {
     width: inherit;
     position: relative;
     height: 20px;
     border-radius: inherit;
     margin: 0px;
     padding-right: 10px;
-    display: inline-block;
     margin: auto;
     background: hsl(225, 100%, 100%);
-    background: linear-gradient(90deg, #2a4710 0%, #ddf872 100%); /*the gradient function for the color mapping used*/
+    background: linear-gradient(90deg, #2a4710 0%, #ddf872 100%);
+    /*the gradient function for the color mapping used*/
     display: flex;
     opacity: 0.7;
     justify-content: space-between;
@@ -111,16 +119,21 @@ body * {
     transition: visibility 2s;
     overflow: hidden;
     border-radius: 0px 0px 7px 7px;
-    
-  }
-  
-  .descriptionPanel h1,h2,h3,h4,h5,h6{
+
+}
+
+.descriptionPanel h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: whitesmoke;
     margin-left: 5%;
     margin-right: 5%;
-  }
+}
 
-  .chevron {
+.chevron {
     position: relative;
     margin-left: 45%;
     font-size: x-large;
@@ -128,24 +141,27 @@ body * {
     cursor: pointer;
 
 }
+
 .button {
-  position: absolute;
-  margin: auto;
-  margin-top: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  top:5%;
-  left:40%;
-  width: fit-content;
-  display: flex;
-  float: initial;
- flex-direction: column;
- border-radius: 14px;
- background-color: #FEEEEEEC;
- font-size: 1.1em;
- font-weight: 800;
- color: black;
+    position: absolute;
+    margin: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    top: 5%;
+    left: 40%;
+    width: fit-content;
+    display: flex;
+    float: initial;
+    flex-direction: column;
+    border-radius: 14px;
+    background-color: #FEEEEEEC;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: black;
+    z-index: 20;
+
 }
 
 /* style for items with the class "layerDescription" */
@@ -154,20 +170,40 @@ body * {
     padding-left: 10px;
 }
 
-.LegendContainer p{
+.LegendContainer p {
     display: inline;
     text-align: left;
     position: relative;
     color: whitesmoke;
-    font-weight: 600    ;
+    font-weight: 600;
     padding: 0.5em;
     text-align: center;
-  }
-  a {
-      color: oldlace;
-  }
-  
-  a:hover {
-      color: lightblue;
-  }
-  
+}
+
+.LegendContainerRight p {
+    display: inline;
+    text-align: left;
+    position: relative;
+    color: whitesmoke;
+    font-weight: 600;
+    padding: 0.5em;
+    text-align: center;
+}
+
+a {
+    color: oldlace;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+#left-select,
+#right-select {
+    width: 20px;
+}
+
+#legendleft,
+#legendright span {
+    font-weight: 800;
+}

@@ -4,14 +4,14 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/meghanto/clid8790q001701q126sq1ak7', // stylesheet location
     center: [-87.623177, 41.881832], // starting position [lng, lat] eg. [-122.6788, 45.5212]
     zoom: 13, // starting zoom
-    minZoom: 13
+    minZoom: 13 //adding a minimum zoom as the polygons stop rendering at lower zooms
 });
 map.addControl(new mapboxgl.NavigationControl(), 'top-left'); // add navigation controls in top left corner
 var popup = new mapboxgl.Popup({
     closeButton: false,
     closeOnClick: false,
-});
-var panelstate = { panelopen: true};
+}); //setting up a hover popup
+var panelstate = { panelopen: true }; //Description panel stays open initially
 
 
 map.on('load', function () {
@@ -21,9 +21,9 @@ map.on('load', function () {
     var nodata_value = true;
     nodataSwitch.addEventListener('change', (event) => {
         nodata_value = event.target.checked;
-        updateBuildings();
+        updateBuildings(); //update buildings when user toggles nodata switch
 
-    })
+    }) //set up slider
     // number of decimal places 
     decimals = 0;
 
@@ -56,7 +56,8 @@ map.on('load', function () {
             'min': 1850,
             'max': 2020
         }
-    });
+    });// Slider for year filtering. Tricky, actually 4 sliders in one, but sliders 1 and 4 are hidden. This allows for the colorbar to stay in place and get obscured as the sliders move.
+
 
     slider.noUiSlider.disable(0);
     slider.noUiSlider.disable(3);
@@ -73,17 +74,17 @@ map.on('load', function () {
     connectors[0].classList.add('black');
     connectors[2].classList.add('black');
     let updateBuildings = () => {
-        map.setFilter('chicago-buildingfootprints',["any",
-        ["==", ["get", "year_built"], nodata_value?0:-900],
+        map.setFilter('chicago-buildingfootprints', ["any",
+            ["==", ["get", "year_built"], nodata_value ? 0 : -900],
 
             ["all",
-            [">=",
-                ["get", "year_built"],
-                slider.noUiSlider.get(true)[1]],
-            ["<=",
-                ["get", "year_built"],
-                slider.noUiSlider.get(true)[2],
-            ]]
+                [">=",
+                    ["get", "year_built"],
+                    slider.noUiSlider.get(true)[1]],
+                ["<=",
+                    ["get", "year_built"],
+                    slider.noUiSlider.get(true)[2],
+                ]]
         ],
             { validate: false })
     };
@@ -110,10 +111,13 @@ map.on('load', function () {
         popup.remove();
 
     });
-    map.on('mousedown', ()=>        {document.getElementById('text_panel').style.display = 'none';
-    document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
-    panelstate.panelOpen = false;}
-);
+    map.on('mousedown', () => {
+        document.getElementById('text_panel').style.display = 'none';
+        document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
+        panelstate.panelOpen = false;
+        // if user starts exploring the map, panel autohides
+    }
+    );
 });
 
 /* create and replace original icon with custom icon*/
