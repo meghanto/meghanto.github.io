@@ -8,9 +8,15 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js" integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"
+        integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"
+        integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
+    <link rel="prerender" href="index1.html">
 
 </head>
 
@@ -19,20 +25,39 @@
     <!-- Map description Panel, interactive arrow to collapse panel-->
 
 
-    <!-- <div class="descriptionPanel" id="descriptionPanel" style="height: 250px;">
-        <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
-        <hr />
-        <h4>WHAT AM I LOOKING AT?</h4>
-        <p style="margin-left: 10px; margin-right: 10px;">
-            This is a map showing every single building in the Chicago area. Data is taken from <a href="https://data.cityofchicago.org/Buildings/Building-Footprints-current-/hz9b-7nh8">The Chicago Data Portal</a>.
-        </p>
-    </div> -->
+    <div class="descriptionPanel" id="descriptionPanel">
+        <div id="text_panel">
+            <h1>Chicago's Building Footprint</h1>
+            <h3>
+                Mapping evergy single building of Chicago by age and height. </h3>
+            <h5>See interesting patterns about how the city developed. </br> Data is taken from <a
+                    href="https://data.cityofchicago.org/Buildings/Building-Footprints-current-/hz9b-7nh8">The Chicago
+                    Data Portal</a></h5>
+
+            <h5> Switch to Tract level view for a broader perspective</h5>
+            <hr />
+        </div>
+        <span id="glyph" class="chevron glyphicon glyphicon-chevron-up"></span>
+
+
+    </div>
+    <a href="index1.html"><button class="button">Switch to Tract-level View</button><a></a>
+
 
     <!-- Map legend panel, the dots are interactive and uses javascript and the Mapbox API to toggle layer visibility-->
     <div class="LegendContainer">
+        <div class="checkbox-wrapper-34">
+            <span>Show Buildings with Missing Data</span>
+
+            <input class='tgl tgl-ios' id='nodata-switch' type='checkbox' checked>
+            <label class='tgl-btn' for='nodata-switch'></label>
+        </div>
         <div id="slider-range"></div>
 
+        <p>Slide to filter buildings by year built</p>
+
     </div>
+
 
 </body>
 

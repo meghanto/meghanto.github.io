@@ -19,7 +19,25 @@ body * {
     width: 100%;
 }
 
-
+.descriptionPanel {
+    position: relative;
+    margin-left: auto;
+    margin-right: 10px;
+    width: 250px;
+    height: fit-content;
+    background: rgba(80, 80, 80, .75);
+    transition: visibility 2s;
+    overflow: hidden;
+    border-radius: 0px 0px 7px 7px;
+    
+  }
+  
+  .descriptionPanel h1,h2,h3,h4,h5,h6{
+    color: whitesmoke;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
 /*  style for items with the class "LegendContainer" */
 .LegendContainer {
     position: absolute;
@@ -32,6 +50,19 @@ body * {
     transition: width 2s, height 2s;
     /* this is the time it takes for the container to transition */
     border-radius: 7px;
+}
+.LegendContainerRight{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    z-index: 2;
+    width: 300px;
+    height: 20px;
+    background: rgba(80, 80, 80, .75);
+    transition: width 2s, height 2s;
+    /* this is the time it takes for the container to transition */
+    border-radius: 7px;
+
 }
 
 .legendItem {
@@ -52,4 +83,91 @@ body * {
 
 }
 
-/* create and replace original icon with custom icon*/
+.legendItem.legendright {
+    width: inherit;
+    position: relative;
+    height: 20px;
+    border-radius: inherit;
+    margin: 0px;
+    padding-right: 10px;
+    display: inline-block;
+    margin: auto;
+    background: hsl(225, 100%, 100%);
+    background: linear-gradient(90deg, #2a4710 0%, #ddf872 100%); /*the gradient function for the color mapping used*/
+    display: flex;
+    opacity: 0.7;
+    justify-content: space-between;
+
+
+}
+
+.descriptionPanel {
+    position: relative;
+    margin-left: auto;
+    margin-right: 10px;
+    width: 250px;
+    height: fit-content;
+    background: rgba(80, 80, 80, .75);
+    transition: visibility 2s;
+    overflow: hidden;
+    border-radius: 0px 0px 7px 7px;
+    
+  }
+  
+  .descriptionPanel h1,h2,h3,h4,h5,h6{
+    color: whitesmoke;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .chevron {
+    position: relative;
+    margin-left: 45%;
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+
+}
+.button {
+  position: absolute;
+  margin: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  top:5%;
+  left:40%;
+  width: fit-content;
+  display: flex;
+  float: initial;
+ flex-direction: column;
+ border-radius: 14px;
+ background-color: #FEEEEEEC;
+ font-size: 1.1em;
+ font-weight: 800;
+ color: black;
+}
+
+/* style for items with the class "layerDescription" */
+.layerDescription {
+    color: white;
+    padding-left: 10px;
+}
+
+.LegendContainer p{
+    display: inline;
+    text-align: left;
+    position: relative;
+    color: whitesmoke;
+    font-weight: 600    ;
+    padding: 0.5em;
+    text-align: center;
+  }
+  a {
+      color: oldlace;
+  }
+  
+  a:hover {
+      color: lightblue;
+  }
+  

@@ -11,11 +11,19 @@ var popup = new mapboxgl.Popup({
     closeButton: false,
     closeOnClick: false,
 });
+var panelstate = { panelopen: true};
+
 
 map.on('load', function () {
 
     var slider = document.getElementById('slider-range');
+    var nodataSwitch = document.getElementById('nodata-switch');
+    var nodata_value = true;
+    nodataSwitch.addEventListener('change', (event) => {
+        nodata_value = event.target.checked;
+        updateBuildings();
 
+    })
     // number of decimal places 
     decimals = 0;
 
@@ -64,19 +72,23 @@ map.on('load', function () {
 
     connectors[0].classList.add('black');
     connectors[2].classList.add('black');
+    let updateBuildings = () => {
+        map.setFilter('chicago-buildingfootprints',["any",
+        ["==", ["get", "year_built"], nodata_value?0:-900],
 
-    slider.noUiSlider.on('update', () => {
-        map.setFilter('chicago-buildingfootprints', ["all",
+            ["all",
             [">=",
                 ["get", "year_built"],
                 slider.noUiSlider.get(true)[1]],
             ["<=",
                 ["get", "year_built"],
                 slider.noUiSlider.get(true)[2],
-            ]
+            ]]
         ],
             { validate: false })
-    })
+    };
+
+    slider.noUiSlider.on('update', updateBuildings)
 
     map.on('mousemove', 'chicago-buildingfootprints', function (e) {
         var coordinates = e.lngLat;
@@ -98,5 +110,24 @@ map.on('load', function () {
         popup.remove();
 
     });
+    map.on('mousedown', ()=>        {document.getElementById('text_panel').style.display = 'none';
+    document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
+    panelstate.panelOpen = false;}
+);
 });
 
+/* create and replace original icon with custom icon*/
+var panelDesc = document.getElementById('glyph');
+
+panelDesc.addEventListener('click', panelSelect)
+function panelSelect(e) {
+    if (panelstate.panelOpen) {
+        document.getElementById('text_panel').style.display = 'none';
+        document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
+        panelstate.panelOpen = false;
+    } else {
+        document.getElementById('text_panel').style.display = 'block';
+        document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-up";
+        panelstate.panelOpen = true;
+    }
+}

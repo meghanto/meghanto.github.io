@@ -15,7 +15,10 @@
     <link rel='stylesheet'
         href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css'
         type='text/css' />
+
     <link rel="stylesheet" href="main1.css">
+    <script src="https://cdn.jsdelivr.net/npm/reefjs@12/dist/reef.min.js"></script>
+
 
 </head>
 
@@ -25,13 +28,37 @@
         <div id='renters' class='map'></div> <!--  div for renters map div -->
     </div>
     
+    <div class="descriptionPanel" id="descriptionPanel">
+        <div id="text_panel">
+            <h1>Chicago's Census Tracts:</h1>
+            <h3>
+                Gain insight on tract level data, and compare variables building age, building age diversity and other factors such as Median Rent </h3>
+            <h5> </br> Data is taken from <a
+                    href="https://opportunityatlas.org">The Opportunity Atlas Project</a></h5>
+
+            <hr />
+        </div>
+        <span id="glyph" class="chevron glyphicon glyphicon-chevron-up"></span>
+
+
+    </div>
+
+    
 
     <div class="LegendContainer">
-        <div class="legendItem"> <!-- div for the colormap in the legend -->
-            <span>0%</span><span style="color:white">100%</span> <!-- text at 2 ends of colormap-->
+        <div class="legendItem" id="legendleft"> <!-- div for the colormap in the legend -->
+ <!-- text at 2 ends of colormap-->
         </div>
 
     </div>
+    <div class="LegendContainerRight">
+
+    <div class="legendItem" id="legendright"> <!-- div for the colormap in the legend -->
+ <!-- text at 2 ends of colormap-->
+    </div>
+</div>
+
+
 
 </body>
 <script src="main1.js"></script>
